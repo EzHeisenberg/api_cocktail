@@ -4,31 +4,6 @@ const {v4: uuid} = require('uuid');
 const semver = require('semver');
 
 
-// const exec = require('child_process').exec;
-
-// function PromiseExec(app) {
-//     return new Promise((resolve, reject) => {
-//         let child = exec(app);
-//         let stdout = '';
-//         let stderr = '';
-//
-//         child.addListener('error', reject);
-//
-//         child.stdout.on('data', function (data) {
-//             stdout += data;
-//         });
-//
-//         child.stderr.on('data', function (data) {
-//             stderr += data;
-//         });
-//
-//         child.addListener('close', (code) => {
-//             resolve({ stdout, stderr,  code} );
-//         });
-//     });
-// }
-
-
 let Tools = {
     checkUpdates: (res, version) => {
 
