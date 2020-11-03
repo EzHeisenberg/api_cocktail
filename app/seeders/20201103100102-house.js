@@ -8,14 +8,14 @@ module.exports = {
     await queryInterface.bulkInsert('houses', [{
       id: Tools.uuid(),
       name: 'Maison 1',
-      user_id: user_id[0],
+      user_id: user_id,
       created_at: Sequelize.fn('NOW'),
       updated_at: Sequelize.fn('NOW'),
     }], {});
     await queryInterface.bulkInsert('houses', [{
       id: Tools.uuid(),
       name: 'Maison 2',
-      user_id: user_id[0],
+      user_id: user_id,
       created_at: Sequelize.fn('NOW'),
       updated_at: Sequelize.fn('NOW'),
     }], {});
