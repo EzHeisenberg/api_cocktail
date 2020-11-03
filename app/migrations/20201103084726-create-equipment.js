@@ -14,11 +14,11 @@ module.exports = {
       watts: {
         type: Sequelize.DOUBLE
       },
-      createdAt: {
+      created_at: {
         allowNull: false,
         type: Sequelize.DATE
       },
-      updatedAt: {
+      updated_at: {
         allowNull: false,
         type: Sequelize.DATE
       }
