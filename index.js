@@ -1,5 +1,6 @@
 require('dotenv').config();
 const { Sequelize } = require('sequelize');
+const cors = require('cors');
 const express = require('express');
 let routes = require('./app/routes');
 let db = require('./app/models');
@@ -9,6 +10,8 @@ const Tools = require('./app/utils/Tools');
 
 const app = express();
 const port = 3000;
+
+app.use(cors());
 
 db.sequelize.sync()
     .then(() => {
