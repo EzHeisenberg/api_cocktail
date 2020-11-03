@@ -8,6 +8,11 @@ module.exports = {
       user_id: user_id[0],
       created_at: Sequelize.fn('NOW'),
       updated_at: Sequelize.fn('NOW'),
+    }, {
+      name: 'Maison 2',
+      user_id: user_id[0],
+      created_at: Sequelize.fn('NOW'),
+      updated_at: Sequelize.fn('NOW'),
     }], {});
   },
 
