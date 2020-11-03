@@ -11,7 +11,7 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       room.belongsTo(models.house);
-      room.hasMany(models.equipment);
+      //room.hasMany(models.equipment);
     }
   };
   room.init({
