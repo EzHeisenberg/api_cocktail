@@ -27,6 +27,7 @@ module.exports = {
     });
     room.associate = models => {
       room.belongsTo(models.house);
+      room.hasMany(models.equipment);
     }
   },
   down: async (queryInterface, Sequelize) => {

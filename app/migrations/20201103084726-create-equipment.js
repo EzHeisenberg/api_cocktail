@@ -11,6 +11,9 @@ module.exports = {
       name: {
         type: Sequelize.STRING
       },
+      watts: {
+        type: Seuqelize.DOUBLE
+      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE

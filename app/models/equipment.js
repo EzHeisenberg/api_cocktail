@@ -14,8 +14,11 @@ module.exports = (sequelize, DataTypes) => {
     }
   };
   equipment.init({
-    name: DataTypes.STRING
+    name: DataTypes.STRING,
+    watts: DataTypes.DOUBLE,
   }, {
+    updatedAt: 'updated_at',
+    createdAt: 'created_at',
     sequelize,
     modelName: 'equipment',
   });
