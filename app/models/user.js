@@ -16,7 +16,6 @@ module.exports = (sequelize, DataTypes) => {
     identifiant: DataTypes.STRING,
     email: DataTypes.STRING,
     password: DataTypes.TEXT('long'),
-    client_id: DataTypes.UUID,
     // isAdmin: DataTypes.BOOLEAN
   }, {
     updatedAt: 'updated_at',
