@@ -12,7 +12,7 @@ module.exports = {
         type: Sequelize.STRING
       },
       watts: {
-        type: Seuqelize.DOUBLE
+        type: Sequelize.DOUBLE
       },
       createdAt: {
         allowNull: false,
