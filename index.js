@@ -3,6 +3,7 @@ const { Sequelize } = require('sequelize');
 const cors = require('cors');
 const express = require('express');
 let routes = require('./app/routes');
+const bodyParser = require('body-parser');
 let db = require('./app/models');
 require('express-group-routes');
 const path = require('path');
@@ -12,6 +13,11 @@ const app = express();
 const port = 3000;
 
 app.use(cors());
+
+app.use(bodyParser.urlencoded({
+    extended: true,
+}));
+app.use(bodyParser.json());
 
 db.sequelize.sync()
     .then(() => {
