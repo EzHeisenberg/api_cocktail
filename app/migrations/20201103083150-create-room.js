@@ -1,20 +1,17 @@
 'use strict';
-
-const Tools = require('../utils/Tools');
-
 module.exports = {
   up: async (queryInterface, Sequelize) => {
-    const houses = await queryInterface.createTable('houses', {
+    await queryInterface.createTable('rooms', {
       id: {
         allowNull: false,
+        autoIncrement: true,
         primaryKey: true,
-        type: Sequelize.UUID,
-        defaultValue: Tools.uuid()
+        type: Sequelize.INTEGER
       },
       name: {
         type: Sequelize.STRING
       },
-      user_id: {
+      house_id: {
         type: Sequelize.UUID
       },
       created_at: {
@@ -28,14 +25,8 @@ module.exports = {
         defaultValue: Sequelize.NOW
       }
     });
-
-    houses.associate = models => {
-      houses.belongsTo(models.user);
-    }
-
   },
-
   down: async (queryInterface, Sequelize) => {
-    await queryInterface.dropTable('houses');
+    await queryInterface.dropTable('rooms');
   }
 };
