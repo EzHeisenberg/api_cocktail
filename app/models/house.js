@@ -17,6 +17,8 @@ module.exports = (sequelize, DataTypes) => {
         name: DataTypes.STRING,
         user_id: DataTypes.UUID
     }, {
+        updatedAt: 'updated_at',
+        createdAt: 'created_at',
         sequelize,
         modelName: 'house',
     });

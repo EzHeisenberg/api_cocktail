@@ -1,7 +1,7 @@
 'use strict';
 module.exports = {
   up: async (queryInterface, Sequelize) => {
-    await queryInterface.createTable('rooms', {
+    const room = await queryInterface.createTable('rooms', {
       id: {
         allowNull: false,
         autoIncrement: true,
@@ -25,6 +25,9 @@ module.exports = {
         defaultValue: Sequelize.NOW
       }
     });
+    room.associate = models => {
+      room.belongsTo(models.house);
+    }
   },
   down: async (queryInterface, Sequelize) => {
     await queryInterface.dropTable('rooms');

@@ -4,7 +4,7 @@ const Tools = require('../utils/Tools');
 
 module.exports = {
   up: async (queryInterface, Sequelize) => {
-    const houses = await queryInterface.createTable('houses', {
+    const house = await queryInterface.createTable('houses', {
       id: {
         allowNull: false,
         primaryKey: true,
@@ -29,8 +29,8 @@ module.exports = {
       }
     });
 
-    houses.associate = models => {
-      houses.belongsTo(models.user);
+    house.associate = models => {
+      house.belongsTo(models.user);
     }
 
   },

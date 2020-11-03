@@ -22,6 +22,9 @@
     <list default="true" id="59cd7c6b-6f14-40c0-ad9f-6f42f31944fc" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/migrations/20201103081055-create-house.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/migrations/20201103081055-create-house.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/migrations/20201103083150-create-room.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/migrations/20201103083150-create-room.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/house.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/house.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/room.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/room.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,11 +35,15 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1ihjgJyRyMelZR0AXaoyp721YW5" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
@@ -81,7 +88,7 @@
       <workItem from="1604318855911" duration="903000" />
       <workItem from="1604319959920" duration="1144000" />
       <workItem from="1604323363477" duration="1899000" />
-      <workItem from="1604389415802" duration="3032000" />
+      <workItem from="1604389415802" duration="3210000" />
     </task>
     <servers />
   </component>
@@ -98,6 +105,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="440" y="94" key="#Project_Structure" timestamp="1602366848415">
