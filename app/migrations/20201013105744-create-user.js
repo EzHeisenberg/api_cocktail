@@ -23,9 +23,6 @@ module.exports = {
       password: {
         type: Sequelize.TEXT('long')
       },
-      client_id: {
-        type: Sequelize.UUID,
-      },
       created_at: {
         allowNull: false,
         type: Sequelize.DATE,
