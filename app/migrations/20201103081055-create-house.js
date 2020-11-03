@@ -31,6 +31,7 @@ module.exports = {
 
     house.associate = models => {
       house.belongsTo(models.user);
+      house.hasMany(models.room);
     }
 
   },

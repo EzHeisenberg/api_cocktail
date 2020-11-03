@@ -11,6 +11,7 @@ module.exports = (sequelize, DataTypes) => {
          */
         static associate(models) {
             house.belongsTo(models.user);
+            house.hasMany(models.room);
         }
     };
     house.init({

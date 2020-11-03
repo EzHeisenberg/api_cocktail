@@ -20,7 +20,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="59cd7c6b-6f14-40c0-ad9f-6f42f31944fc" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/app/migrations/20201103084726-create-equipment.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/migrations/20201103084726-create-equipment.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/migrations/20201103081055-create-house.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/migrations/20201103081055-create-house.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/house.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/house.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,7 +86,7 @@
       <workItem from="1604318855911" duration="903000" />
       <workItem from="1604319959920" duration="1144000" />
       <workItem from="1604323363477" duration="1899000" />
-      <workItem from="1604389415802" duration="4381000" />
+      <workItem from="1604389415802" duration="4939000" />
     </task>
     <servers />
   </component>
