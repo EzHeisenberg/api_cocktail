@@ -2,12 +2,11 @@
 
 module.exports = {
   up: async (queryInterface, Sequelize) => {
-    const users = await queryInterface.rawSelect('Users', {}, ['id']);
-    console.log(users);
-    for (let user in users) {
+    const houses = await queryInterface.rawSelect('houses', {}, ['id']);
+    for (let house in houses) {
       await queryInterface.bulkInsert('rooms', [{
         name: 'Salon',
-        house_id: user,
+        house_id: houses,
         created_at: Sequelize.fn('NOW'),
         updated_at: Sequelize.fn('NOW'),
       }], {});
