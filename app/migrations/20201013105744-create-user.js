@@ -11,10 +11,7 @@ module.exports = {
         type: Sequelize.UUID,
         defaultValue: Tools.uuid()
       },
-      firstname: {
-        type: Sequelize.STRING
-      },
-      lastname: {
+      identifiant: {
         type: Sequelize.STRING
       },
       email: {
@@ -23,6 +20,9 @@ module.exports = {
       password: {
         type: Sequelize.TEXT('long')
       },
+      // isAdmin: {
+      //   type: Sequelize.BOOLEAN
+      // },
       created_at: {
         allowNull: false,
         type: Sequelize.DATE,
