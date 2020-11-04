@@ -2,17 +2,21 @@
 module.exports = (db) => {
     const User = db.User
     const crypto = require('crypto');
+    const Tools = require('../utils/Tools');
+
 
     return {
         register: async (req, res) => {
             try {
                 const pass = req.body.password
-
                 const hash = crypto.createHash("sha256")
                 const passHash = hash.update(pass).digest("hex")
+
+
+
                 // create a new user with the password hash from bcrypt
                 let user = await User.create(
-                    Object.assign(req.body, { password: passHash })
+                    Object.assign(req.body, { password: passHash, id: Tools.uuid()})
                 );
 
                 // data will be an object with the user and it's authToken
@@ -21,6 +25,7 @@ module.exports = (db) => {
                 // send back the new user and auth token to the
                 // client { user }
                 return res.json(data);
+                return res.status(200);
 
             } catch(err) {
                 return res.status(400).send(err);
