@@ -46,7 +46,7 @@ module.exports = (db) => {
             const passHash = hash.update(password).digest("hex")
 
             try {
-                let user = await User.authenticate(email, passHash)
+                let user = await User.authenticate(email , password)
 
                 user = await user.authorize();
 

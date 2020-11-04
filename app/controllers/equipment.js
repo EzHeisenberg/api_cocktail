@@ -29,6 +29,7 @@ module.exports = (db) => {
             try {
                 const equipmentCreate = await Equipment.create(body);
                 console.log('add new equipment')
+                return res.status(200);
             }catch (err) {
                 return res.status(500).send(err.message);
             }
@@ -42,9 +43,8 @@ module.exports = (db) => {
                 }else {
                     await equipments.destroy()
                     console.log('deleted id : ' + id)
+                    return res.status(200);
                 }
-                return res.send(equipments)
-
             } catch (error) {
                 return res.status(500).send(error.message);
             }
