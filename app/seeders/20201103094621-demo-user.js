@@ -8,7 +8,7 @@ module.exports = {
       id: Tools.uuid(),
       firstName: 'EZ',
       lastName: 'Heisen',
-      email: 'aaaa@exemple.fr',
+      email: 'lucas@live.fr',
       password: 'puzocni<amdjajdamzldj!"uànrUN089N0',
       client_id: '9876789098768909876789098767898765',
     }]);

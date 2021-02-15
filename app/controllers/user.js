@@ -3,6 +3,8 @@ module.exports = (db) => {
     const User = db.User
     const crypto = require('crypto');
     const Tools = require('../utils/Tools');
+    var session = require('express-session');
+
 
 
     return {
@@ -12,16 +14,12 @@ module.exports = (db) => {
                 const hash = crypto.createHash("sha256")
                 const passHash = hash.update(pass).digest("hex")
 
-
-
                 // create a new user with the password hash from bcrypt
                 let user = await User.create(
                     Object.assign(req.body, { password: passHash, id: Tools.uuid()})
                 );
-
                 // data will be an object with the user and it's authToken
                 let data = await user.authorize();
-
                 // send back the new user and auth token to the
                 // client { user }
                 return res.json(data);
@@ -32,33 +30,44 @@ module.exports = (db) => {
             }
 
         },
-
-
         login: async (req, res) => {
-            const email = req.body.email
-            const password = req.body.password
-
-            // if the username / password is missing, we use status code 400
-            // indicating a bad request was made and send back a message
+            const { email, password } = req.body;
+            const getUser = async email => {
+                return await User.findOne({
+                    where: email,
+                })
+            }
             if (!email || !password) {
                 return res.status(400).send(
-                    'Request missing username or password param'
+                    'Email ou mot de passe vide'
                 );
-            }
+            }else{
+                let user = await getUser({ email })
+                if(!user){
+                    res.status(401).send('aucun utilisateur trouver');
+                }
+                if (user.password === password) {
 
 
-            const hash = crypto.createHash("sha256")
-            const passHash = hash.update(password).digest("hex")
+                    const getInfoUser = await User.findOne({
+                        where: {id: user.id},
+                        attributes: ["id", "email", "identifiant"]
+                    })
+                    /*
+                    app.use(session(
+                        {
+                            secret: 'a random string',
+                            saveUninitialized: false,
+                            resave: false
+                        }
+                    ));
+                    */
 
-            try {
-                let user = await User.authenticate(email , password)
-
-                user = await user.authorize();
-
-                return res.json(user);
-
-            } catch (err) {
-                return res.status(400).send('invalid username or password');
+                    res.send(getInfoUser)
+                    res.status(200)
+                } else {
+                    res.status(401).send('Mot de passe incorrect');
+                }
             }
         },
 

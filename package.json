@@ -1,5 +1,5 @@
 {
-  "name": "WorkshopAPI",
+  "name": "cocktail_api",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -9,6 +9,7 @@
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "express-group-routes": "^1.1.0",
+    "express-sesssion": "^1.15.5",
     "forever": "^3.0.2",
     "glob": "^7.1.6",
     "moment": "^2.29.1",
